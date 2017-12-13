@@ -208,7 +208,7 @@ $(function(){
 					diceclone.appendTo("body").addClass("tosmall").css({"left":"50%","marginLeft":"-54px","top":"302px"}).animate(
 						{
 							"marginLeft":"0",
-							"left":"10px",
+							"left":"20px",
 							"top":"130px",
 						},1400,function(){
 							$(".tosmall").remove();
