@@ -209,8 +209,8 @@ $(function(){
 						{
 							"marginLeft":"0",
 							"left":"10px",
-							"top":"120px",
-						},1500,function(){
+							"top":"130px",
+						},1400,function(){
 							$(".tosmall").remove();
 							showResult();
 						}
@@ -232,12 +232,13 @@ $(function(){
 				ot = $(this).offset().top;
 				$(this).css({
 					"left":ol,
-					"top":ot
+					"top":ot,
+					"zIndex":100
 				})
 				$(this).appendTo("body").animate({
 					"left":"100px",
 					"top":"5px"
-				},800);
+				},1100);
 			})
 			$(".top2_1,.top6_1").removeClass("current");
 			$(".reward").removeClass("db");
@@ -251,6 +252,7 @@ $(function(){
 		lotterytime = 13;
 		gametype = 0;
 		clearChip();
+		totalChipMoney = 0;
 		game_state();
 	}
 	
@@ -321,6 +323,7 @@ $(function(){
 		for (var o in chipdata){
 			chipdata[o].totalChip = 0;
 		}
+		totalChipMoney = 0;
 	}
 	
 	//投注金币是否足够

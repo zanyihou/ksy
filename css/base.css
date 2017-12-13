@@ -388,11 +388,9 @@ cursor:pointer;
 }
 .past_content_all{
 	position:relative;
-	height:156px;
+	height:160px;
 	width: 100%;
-	overflow:hidden;
 	overflow-x: scroll;
-	/* box-sizing:border-box; */
 }
 .past_content .past_down{
 	position:absolute;
@@ -401,7 +399,7 @@ cursor:pointer;
 	left:0;
 }
 .past_content .past_left{
-	width:10%;
+	width:40px;
 	display:block;
 	line-height:1.1rem;
 	margin-top:3rem;
@@ -633,11 +631,11 @@ margin:0 auto;
 		text-align:center;
 	}
 	.past_content .load_more, .record_content .load_more{
-		background:#221e2c;
 		border:none;
 		color:#9a8dc3;
 		text-decoration: none;
 		outline: none;
+		font-size: 13px;
 	}
 	.record_content .load_more1{
 
@@ -1129,7 +1127,7 @@ p.dice_item { display: none; position: absolute; bottom: 55px; left: 38px;}
 p.dice_item img { width: 32px; float: left; margin-right: 3px;}
 p.dice2 {position: absolute; bottom: 54px; left: 38px;}
 p.dice2 img { width: 32px; float: left; margin-right: 4px;}
-.boxt { position: absolute; bottom: 300px;}
+.boxt { position: absolute; left: 0; bottom: 300px;}
 .move { animation:lrMove linear 0.3s infinite; -webkit-animation:lrMove linear 0.3s infinite; -moz-animation:lrMove linear 0.3s infinite;  -o-animation:lrMove linear 0.3s infinite;}
 .tosmall {z-index: 9999; animation:movesmall 1.5s linear forwards; -webkit-animation:movesmall 1.5s linear forwards;}
 
@@ -1177,5 +1175,5 @@ p.dice2 img { width: 32px; float: left; margin-right: 4px;}
 100% {-o-transform:rotate(-30deg)}
 }
 
-.reward { z-index: 8888; display: none; position: absolute; left: 50%; top: 50%; margin-top: -120px; margin-left: -125px; width: 250px;}
-.reward img { width: 100%;}
+.reward { background: rgba(0,0,0,0.6); padding-top: 200px; box-sizing: border-box; z-index: 8888; display: none; position: absolute; left: 0; top: 0;  text-align: center; width:100%; height: 100%;}
+.reward img { width: 250px;}
