@@ -886,7 +886,7 @@ margin:6px;}*/
 	text-align:center;	
 	color:#fff;
 	left:0;
-	z-index:5;
+	z-index:99;
 	display:none;
 }
 .top_all .mb{
