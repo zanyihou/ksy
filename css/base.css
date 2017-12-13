@@ -378,7 +378,7 @@ cursor:pointer;
 	/* height:100%; */
 	position:fixed;
 	/* background:rgba(0, 0, 0,0.5); */
-	z-index:51;
+	z-index:101;
 	/* padding-bottom:30%; */
 	cursor:pointer;
 	border-top:5px solid #000000;
