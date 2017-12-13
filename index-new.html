@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>江苏快三摇一摇</title>
+	<link rel="stylesheet" href="css/shop_goods.css" />
+	<link rel="stylesheet" href="css/base.css" />
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<style>
+	.sim-pop-box{position: absolute; left: 0; top:0; width: 100%; z-index: 99999999;color: #000;font-size: 12px;font-family: Helvetica, STHeiti, Droid Sans Fallback;}
+	.sim-pop-box button{background: none;border: none;outline: none;cursor: pointer;-webkit-appearance: none;}
+	.sim-pop-box *{margin: 0; padding: 0}.sim-pop-mask,.sim-pop-dis{position: fixed;top:0;right: 0;bottom: 0;left: 0; }
+	.sim-pop-mask{background-color: rgba(0,0,0,0.3);pointer-events:auto;}
+	.sim-pop-dis,.sim-pop-ft{display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
+	.sim-pop-dis{-webkit-box-pack: center;box-pack: center;-webkit-box-align: center;box-align: center;-webkit-justify-content: center;justify-content: center;-webkit-align-items: center;align-items: center; pointer-events: none;}
+	.sim-pop-win{pointer-events: auto;}
+	.sim-pop-com,.sim-pop-loading{max-width: 300px;background-color: rgba(0,0,0,0.2);}
+	.sim-pop-hd{height: 50px;line-height: 50px;padding: 0 40px 0 10px;border-bottom: 1px solid #eee;position: relative}
+	.sim-pop-hd h2{font-size: 14px;font-weight: normal;}
+	.sim-pop-close{width: 40px;height: 50px;line-height: 50px;text-align: center;font-size: 26px;position: absolute;right: 0;top: 0;color: rgba(0,0,0,0.5);}
+	.sim-pop-close:focus,.sim-pop-close:hover,.sim-pop-close:active{color: rgba(0,0,0,0.4)}
+	.sim-pop-bd{word-break: break-all;font-size:14px;color:rgba(255,255,255,0.4);background:rgba(0,0,0,0.6);padding:20px;border-radius:5px;}
+	.sim-pop-ft{border-top:1px solid #eeeeee}.sim-pop-btn{-webkit-box-flex: 1; -ms-flex: 1;-webkit-flex: 1;flex: 1;height: 40px;line-height: 40px;font-size: 14px;display: block}
+	.sim-pop-btn:not(:first-child){border-left: 1px solid #eee}.sim-pop-loading{padding:20px 50px;box-sizing: border-box;border: none; background:#000;}
+	.sim-pop-win{opacity: 0;-webkit-transform: scale(0.5);transform: scale(0.5);-webkit-transition: all .18s;transition: all .18s;}
+	.sim-pop-in{opacity: 1;-webkit-transform:scale(1);transform:scale(1);}
+	</style>
+</head>
+<body>
+<div class="set-total-div">
+	<p class="set-total-notice">【提示】</p>
+	<p class="set-total-p">您的默认单局投注限额为<span class="limit-money font-set">200</span>金币，您可以在<span class="font-set">个人中心--偏好设置</span>进行修改。</p>
+	<p class="iknowset">我知道了</p>
+</div>
+<div class="header_top">
+	<div class="header_top_in">
+		<!--<img class="re_shop receive_shop" src="./img/receive2.png">
+		<img class="re_shop receive_rank" src="./img/receive.png">-->
+		<div class="note_out">
+			<div class="notes">
+			<span class="note"></span>
+			</div>
+			<img class="note_img" src="./img/note.png" width="100%">
+		</div>
+		<span class="left" id="recharge">我的金币：<i class="qb_up"></i><span class="qb_out"><b class="qb_num">0</b></span><img class="rcg_lg" src="./img/rcg_lg.png"></span>
+	</div>
+</div>
+
+
+
+<div class="content">
+	<img class="content_bg" src="./img/content_bg.png" width="100%">
+	<!--<div class="qb_fly">
+		<img class="img_0" src="./img/2_1.png" width="15">
+		<img class="img_0" src="./img/2_1.png" width="15">
+		<img class="img_0" src="./img/2_1.png" width="15">
+		<img class="img_0" src="./img/2_1.png" width="15">
+		<img class="img_0" src="./img/2_1.png" width="15">
+	</div>-->
+	
+	<div class="header_all">
+		<img class="header"src="./img/header.png" width="100%">
+		
+		<div class="peach">
+			<div style="font-size: .5rem; text-align: center;">
+				<img src="img/usericon.jpg" style="border: .15rem #fff solid; display: inline-block; margin-bottom: 3px; border-radius: 50%;"  width="50px">
+				<h1 style="color: #fff; font-size: .8rem; margin-bottom: .2rem;">我是王者</h1>
+				<h2 style="color: #fff; font-size: .5rem; color: #ffd43f;">正在坐庄</h2>
+				<p style="margin-top: .7rem;"><a style="color: #fff; background:#006d57; border-radius: 3px; padding: 6px 12px 8px;">申请上庄</a></p>
+			</div>
+		</div>
+		
+		<div class="judge"></div>
+		<div class="note_in22" style="display: none;">
+			<span class="record"></span>
+			<span class="game_rule"></span>
+			<span class="game_back"></span>
+			<img class="note_in" src="./img/note_in.png" width="100%">
+		</div>
+		<div class="header_k header_l">
+			<div class="header_up"><b>上期:<span id="sum">15</span></b></div>
+			<div class="header_down"><b id="past_images"><img src="img/dot1.png"><img src="img/dot2.png"><img src="img/dot5.png"></b><i id="past_result">大</i></div>
+		</div>
+		<div class="header_k header_r">
+			<div class="header_up header_up_b"><b>投注时间还剩</b></div>
+			<div class="header_down t_ts"><b class="timer">加载中</b></div>
+			<div class="middle">
+				<p class="prizing">正在开奖中</p>
+			</div>
+			<div class="progress_out">
+				<ul id="progress">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li id="djs_p"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="top_all">
+		<img class="top1" src="./img/top1.png" width="96%">
+		<div class="top2">
+			<img src="./img/top2.png" width="96%">
+			<ul class="top_ul top2_ul">
+			<li class="top2_1" data-value="000"><div class="mb_out"><span class="mb">0</span></div></li>
+			<li class="top2_2" data-value="xxx"><div class="mb_out"><span class="mb">0</span></div></li>
+			<li class="top2_3" data-value="999"><div class="mb_out"><span class="mb">0</span></div></li>
+			</ul>
+		</div>
+		<img src="./img/top3.png" width="96%">
+		<div class="top4">
+			<img src="./img/top4.png" width="96%">
+			<ul class="top_ul top4_ul">
+				<li class="top4_1" data-value="111"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top4_2" data-value="222"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top4_3" data-value="333"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top4_4" data-value="444"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top4_5" data-value="555"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top4_6" data-value="666"><div class="mb_out"><span class="mb">0</span></div></li>
+			</ul>
+		</div>
+		<img src="./img/top5.png" width="96%">
+		<div class="top6">
+			<img src="./img/top6.png" width="96%">
+			<ul class="top_ul top6_ul">
+				<li class="top6_1" data-value="11x"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top6_2" data-value="22x"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top6_3" data-value="33x"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top6_4" data-value="44x"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top6_5" data-value="55x"><div class="mb_out"><span class="mb">0</span></div></li>
+				<li class="top6_6" data-value="66x"><div class="mb_out"><span class="mb">0</span></div></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="user-wrap">
+		<li class="user-li"><img src="img/player1.jpg" width="80%"><span></span></li>
+		<li class="user-li"><img src="./img/player2.jpg" width="80%"><span></span></li>
+		<li class="self"><img src="./img/player3.jpg" width="80%"><span></span></li>
+		<li class="user-li"><img src="./img/player4.jpg" width="80%"><span></span></li>
+		<li class="user-li"><img src="./img/avatar.png" width="80%"><span></span></li>
+	</div>
+</div>----
+
+<div class="footer">
+	<div class="footer_in">
+		<img class="past" src="./img/past.png" width="16%" style="display: block;">
+		<img class="line_up" src="./img/line.png" width="100%">
+		<img class="line_down" src="./img/line.png" width="100%">
+		<ul class="bottom">
+			<li><div class="bottom_in"><img class="current" src="./img/1_1.png" width="100%"><span class="meng" data-num="1_1" data-value="1"></span></div></li>
+			<li><div class="bottom_in"><img src="./img/2_1.png" width="100%" class=""><span class="meng" data-num="2_1" data-value="5"></span></div></li>
+			<li><div class="bottom_in"><img src="./img/3_1.png" width="100%" class=""><span class="meng" data-num="3_1" data-value="50"></span></div></li>
+			<li><div class="bottom_in"><img src="./img/4_1.png" width="100%" class=""><span class="meng" data-num="4_1" data-value="500"></span></div></li>
+		</ul>
+		<img class="right clear_con" src="./img/clear.png" width="25%">
+	</div>
+</div>
+
+<div class="past_content" style="display: none;">
+	<img class="past_down" src="./img/pick.png" width="15%" style="display: none;">
+	<div class="past_content_all">
+		<span class="past_left">往<br>期<br>开<br>奖</span>
+		<ul class="past_right" id="records_out">
+			<li id="tpl_game_records">
+				<img class="new" src="./img/new.png" width="10">
+				<b class="past_top">54期</b>
+				<i class="hezhi">8</i>
+				<p class="img_all">
+					<img src="img/dot1.png">
+					<img src="img/dot2.png">
+					<img src="img/dot5.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			<li id="tpl_game_records">
+				<b class="past_top">53期</b>
+				<i class="hezhi">11</i>
+				<p class="img_all">
+					<img src="img/dot6.png">
+					<img src="img/dot1.png">
+					<img src="img/dot4.png">
+				</p>
+			</li>
+			 
+		</ul>
+		<ul class="load_more_ul" style="display:none;">
+			<li class="load_more_qs"><a id="btn_game_records_more" class="load_more load_more2" href="javascript:;">&lt;&lt;点击加载更多&gt;&gt;</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="record_content">
+	<div class="record_content_out">
+		<div class="record_content_in">
+			<h1>投注记录</h1>
+			<ul class="record_ul">
+				<li id="tpl_user_records">
+					<div class="record_con">
+						<span class="record_l"><b class="record_num">0813期</b><br><i class="record_day">01-22&nbsp;</i></span>
+						<img class="more-logo" src="./img/i4.png">
+						<span class="record_r"><b class="record_result">未中奖</b><br><i class="record_qb">投注100金币</i></span>
+					</div>
+					<div class="record_more2">
+						<p><span class="record_win">本期投注详情：</span><span class="record_wresult">大，豹子，11x，44x，222，333</span></p>
+						<p><span class="record_win">本期开奖详情：</span><span class="record_win2">115，小</span></p>
+					</div>
+				</li>
+				<li id="tpl_user_records">
+					<div class="record_con">
+						<span class="record_l"><b class="record_num">0813期</b><br><i class="record_day">01-22&nbsp;</i></span>
+						<img class="more-logo" src="./img/i4.png">
+						<span class="record_r"><b class="record_result">中奖1000元</b><br><i class="record_qb">投注100金币</i></span>
+					</div>
+					<div class="record_more2">
+						<p><span class="record_win">本期投注详情：</span><span class="record_wresult">大，豹子，11x，44x，222，333</span></p>
+						<p><span class="record_win">本期开奖详情：</span><span class="record_win2">115，小</span></p>
+					</div>
+				</li>
+				<li class="load_more_tz"><a id="btn_user_records_more" href="javascript:;" class="load_more load_more1">&lt;&lt;加载更多&gt;&gt;</a></li>
+			</ul>
+			<img class="pop_close" src="./img/close.png">
+		</div>
+		<div style="text-align:center; padding:8% 0; width:100%; max-width:640px;">
+			<span class="btn_return"> 回到游戏</span>
+		</div>
+	</div>
+</div>
+
+<div class="rule">
+	<div class="rule_out">
+		<div class="rule_in">
+			<div class="rule_content">
+				<h1>快三摇一摇详细规则</h1>
+				<h2>一、游戏玩法说明</h2>
+				<ul>
+					<li>1.快三摇一摇开奖结果和江苏快三官方开奖结果一致， 可在官方网站查看。</li>
+					<li>2.每局游戏的投注时间为7分钟，玩家在投注时间内首先选择自己要投注的筹码，然后点
+					击要投注的区域进行投注，在投注时间外，不可进行投注。</li>
+					<li>3.筹码上的面值即为金币，例如：1筹码=1金币，在一局游戏中，玩家可选择不同的筹码进行投注，当玩家的金币不足时，无法投注，请补充金币，每期的最高投注50000金币。</li>
+					<li>4.投注的区域上方写明了该投注的名称和赔率，当玩家投注了一个区域后，该区域下方显示玩家在该区域的金币总数。在一局游戏中，玩家可对每个投注区域进行反复投注。</li>
+					<li>5.在屏幕的右下角有撤销投注的按钮，在投注时间内点击，可将玩家当前所有投注全部撤销，撤销后玩家可再进行投注。投注时间内外则不可撤销。</li>
+					<li>6.投注时间结束后，进入买定离手时间，在此期间内玩家等待开奖，不可投注也不可撤销投注。</li>
+					<li>7.买定离手时间结束后，进入开奖时间，三个骰子全部停下来后的点数即为本局游戏的开奖结果，与开奖结果匹配的投注区域高亮显示。</li>
+					<li>8.开奖时间结束后，进入派奖时间，开奖后再按照开奖结果，返还中奖者的投注筹码和相应的奖励筹码。至此，一局游戏结束后，进入下一局游戏。</li>
+					<li>9.左上区域显示上期的开奖结果，点击底部显示最近20期的开奖结果。</li>
+					<li>10.如需查看历史投注记录，可在右上角相应图标处操作。</li>
+				</ul>
+				<h2>二、投注区域及赔率说明</h2>
+				<ul>
+					<li>1.小：三个骰子的点数之和为4-10，赔率1赔2，如果开奖结果为豹子，则玩家不中奖。</li>
+					<li>2.大：三个骰子的点数之和为11-17，赔率1赔2，如果开奖结果为豹子，则玩家不中奖。</li>
+					<li>3.豹子通选：三个骰子的点数一致且为任一点数，赔率1赔24。</li>
+					<li>4.豹子直选：三个骰子的点数一致且为某一点数，赔率1赔150。</li>
+					<li>5.对子单选：三个骰子中有两个骰子的点数一致且为某一点数，另一个骰子的点数不一致且为任一点数，赔率1赔8。</li>
+					<li>6.赔率解释：1赔2，即玩家投入1，若中奖，除返还已投入的1外，再赔给玩家1，例如用户投注100金币，赔率1赔2，若中奖，用户将获得200金币回报，以此类推。</li>
+					<li>7.用户不得以任何软件或其他作弊行为参与本游戏，一经发现，不予派奖；对已发奖的，有权有求用户返还。</li>
+					<li><span class="rule_tb">8.如因突然停电，网络延迟、网络拥堵、系统故障等意外因素或其他不可抗力，导致你未能成功参与游戏或是服务器发生中断，我们将金币退换你的账户，我方对此不承担任何责任。</span></li>
+				</ul>
+				<h2>三、联系客服</h2>
+				<ul>
+					<li>1.如在游戏过程中遇到任何问题，请联系客服。客服QQ：<span class="rule_tb">888</span> 。</li>
+				</ul>
+				<img class="pop_close" src="./img/close.png">
+			</div>
+		</div>
+		<div style="text-align:center; padding:8% 0; width:92%; max-width:588.8px; margin:0 auto;">
+			<span class="btn_return btn_return2"> 回到游戏</span>
+		</div>
+	</div>
+</div>
+<div class="tz">
+	<div class="tz_in">
+		<img src="./img/start_bg.png" width="60%">
+		<span class="start_tz">请投注</span>
+	</div>
+</div>
+
+<div class="dicebox">
+	<img class="boxb" src="img/box_bt_icon.png" width="180px">
+	<p class="dice_item">
+		<img src="img/dot6.png">
+		<img src="img/dot6.png">
+		<img src="img/dot6.png">
+	</p>
+	
+	<p class="dice2" style="display: none;">
+		<img class="pos1" src="img/dot6.png">
+		<img class="pos2" src="img/dot6.png">
+		<img class="pos3" src="img/dot6.png">
+	</p>
+	<img class="boxt" style="display: none;" src="img/box_tp_icon.png" width="182px">
+</div>
+
+<div class="reward">
+	<img src="img/reward.png">
+</div>
+
+<div class="recharge_wrap charge_wrap">
+	<div class="page" style="/* display: none; */">
+		<div class="page_in"></div>
+		<div class="page-content">
+			<div class="con-title">
+				<img class="title-img" src="https://pages.57jingcai.com/images/shop_goods/bg-dialog-ylc-hd__red.png"><p>
+					<b>·</b>
+					<b class="wrap_title">金币充值</b>
+					<b>·</b>
+				</p>
+				<a class="charge_wrap_close">
+					<img src="https://pages.57jingcai.com/images/shop_goods/close.png" class="charge_wrap_close_btn">
+				</a></div><div class="recharge-content-out">
+					<div class="recharge-content">
+						<div class="con-first">今日首充送15%</div>
+						<ul class="con-ul">
+							<li>
+								<img class="f-l con-ul-logo" src="img/qb_30.png" alt="">
+								<div class="con-ul-mid f-l">
+									<div class="con-ul-money" style="margin-top: 0.5rem;">
+										<b class="wrap_qb">30</b>金币</div>
+								</div>
+								<button class="con-ul-btn f-r">获取</button>
+							</li>
+							<li>
+								<img class="f-l con-ul-logo" src="img/qb_100.png" alt="">
+								<div class="con-ul-mid f-l">
+									<div class="con-ul-money" style="margin-top: 0.5rem;">
+										<b class="wrap_qb">100</b>金币</div>
+								</div>
+								<button class="con-ul-btn f-r">获取</button>
+							</li>
+							<li>
+								<img class="f-l con-ul-logo" src="img/qb_500.png" alt="">
+								<div class="con-ul-mid f-l">
+									<div class="con-ul-money" style="margin-top: 0.5rem;">
+										<b class="wrap_qb">500</b>金币</div>
+								</div>
+								<button class="con-ul-btn f-r">获取</button>
+							</li>
+							<li>
+								<img class="f-l con-ul-logo" src="img/qb_1000.png" alt="">
+								<div class="con-ul-mid f-l">
+									<div class="con-ul-money" style="margin-top: 0.5rem;">
+										<b class="wrap_qb">1000</b>金币</div>
+								</div>
+								<button class="con-ul-btn f-r">获取</button>
+							</li>
+							<li>
+								<img class="f-l con-ul-logo" src="img/qb_5000.png" alt="">
+								<div class="con-ul-mid f-l">
+									<div class="con-ul-money" style="margin-top: 0.5rem;">
+										<b class="wrap_qb">5000</b>金币</div>
+								</div>
+								<button class="con-ul-btn f-r">获取</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+	
+<div class="guide guide_one" style="display:none;">
+	<img class="first_01" src="./img/first_01.png" width="60%">
+	<div class="guide_wenzi">
+		<h1>欢迎来到全民摇一摇</h1>
+		<p><span class="step_one">步骤一</span>选择您心仪的筹码</p>
+	</div>
+	<span class="next_step">下一步</span>
+</div>
+
+<div class="guide guide_two" style="display:none;">
+	<img class="first_01" src="./img/first_02.png" width="60%">
+	<div class="guide_wenzi">	
+		<h1>欢迎来到江苏快三摇一摇</h1>
+		<p><span class="step_one">步骤二</span>选择投注区域完成下注</p>
+	</div>
+	<span class="return_step">开始游戏</span>
+</div>
+
+<div id="recharge_alert" class="recharge_out" style="display:none;">
+	<div class="recharge_in">
+		<img src="./img/recharge.png" width="100%">
+		<span class="recharge_close"></span>
+		<span class="recharge"></span>
+	</div>
+</div>
+
+<script type="application/javascript">
+	$(function() {
+		FastClick.attach(document.body);
+	});
+</script>
