@@ -210,7 +210,7 @@ $(function(){
 							"marginLeft":"0",
 							"left":"20px",
 							"top":"130px",
-						},1400,function(){
+						},1200,function(){
 							$(".tosmall").remove();
 							showResult();
 						}
@@ -238,7 +238,7 @@ $(function(){
 				$(this).appendTo("body").animate({
 					"left":"100px",
 					"top":"5px"
-				},1100);
+				},1000);
 			})
 			$(".top2_1,.top6_1").removeClass("current");
 			$(".reward").removeClass("db");
